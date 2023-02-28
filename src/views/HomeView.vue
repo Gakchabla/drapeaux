@@ -1,9 +1,9 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import Flags from '../components/Flags.vue'
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <Flags />
   </main>
 </template>
