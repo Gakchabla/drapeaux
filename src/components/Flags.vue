@@ -13,8 +13,7 @@ return search.value ? flags.value.filter(flag => flag.name.common.toLowerCase().
 watch(checkedContinent, async (newCheckedContinent)=>{
      const checked = await JSON.parse(JSON.stringify(newCheckedContinent))
     await fetchFlags()
-    if (checked.length > 0){flags.value = flags.value.filter(flag=>newCheckedContinent.includes(flag.region))}
-else{fetchFlags}})
+    if (checked.length > 0){flags.value = flags.value.filter(flag=>newCheckedContinent.includes(flag.region))}})
 
 
 
@@ -41,7 +40,7 @@ fetchFlags()
     <div class="flex justify-around items-center"><input class="mx-2" type="checkbox" name="Oceania" value="Oceania" v-model="checkedContinent">
     <label for="Oceania"> Oceania</label></div></div> 
     </div>
-    <div class="flex justify-center w-[100vw] h-8"><input type="text" v-model="search" placeholder="Search a country" ></div>
+    <div class="flex justify-center w-[100vw] h-10"><input type="text" v-model="search" placeholder="Search a country" class="rounded-xl pl-2 border-[#001489] border-2" ></div>
     <div class="flex flex-wrap justify-around "><div v-for="flag in filteredFlags" :key="flag.name.common" class="my-4">
         <FlagCard :country="flag" />
     </div></div>
